@@ -1,0 +1,46 @@
+CREATE TABLE Ship (
+    shipId TEXT NOT NULL,
+    shipName TEXT NOT NULL,
+    shipType TEXT NOT NULL,
+    homePort TEXT NOT NULL,
+    shipImage TEXT NOT NULL
+);
+
+insertShip:
+INSERT INTO Ship(shipId, shipName, shipType, homePort, shipImage)
+VALUES(?, ?, ?, ?, ?);
+
+
+removeAllShips:
+DELETE FROM Ship;
+
+selectShipById:
+SELECT * FROM Ship
+WHERE shipId = ?;
+
+selectAllShips:
+SELECT *
+FROM Ship;
+
+CREATE TABLE Mission (
+    shipId TEXT NOT NULL,
+    missionName TEXT NOT NULL,
+    missionWikipedia TEXT NOT NULL,
+    missionWebsite TEXT NOT NULL,
+    missionTwitter TEXT NOT NULL,
+    missionDescription TEXT NOT NULL
+);
+
+insertMission:
+INSERT INTO Mission(shipId, missionName, missionWikipedia, missionWebsite, missionTwitter, missionDescription)
+VALUES(?, ?, ?, ?, ?, ?);
+
+selectMissionByShipId:
+SELECT * FROM Mission
+WHERE shipId = ?;
+
+selectMissionByName:
+SELECT * FROM Mission
+WHERE missionName = ?;
+
+

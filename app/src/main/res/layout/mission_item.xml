@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<androidx.cardview.widget.CardView
+    android:clickable="true"
+    android:focusable="true"
+    android:layout_marginBottom="8dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginRight="4dp"
+    android:layout_marginLeft="4dp"
+    android:foreground="?selectableItemBackground"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:id="@+id/card_view"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <LinearLayout android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="@color/custom_darkGrey"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+
+        <TextView
+            android:id="@+id/txtMissionName"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:textColor="@color/white"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="20sp"
+            android:text="Mission Name"
+            android:layout_marginStart="4dp"
+            android:gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/txtMissionDescription"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:text="Mission Description"
+            android:layout_marginStart="4dp"
+            android:maxLength="50"/>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
